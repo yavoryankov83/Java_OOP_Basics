@@ -5,17 +5,17 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class Animal {
-    protected ArrayList<Food> foodEaten;
+  protected ArrayList<Food> foodEaten;
 
-    public Animal() {
-        this.foodEaten = new ArrayList<>();
-    }
+  public Animal() {
+    this.foodEaten = new ArrayList<>();
+  }
 
-    public final void eat(Food food) {
-        this.foodEaten.add(food);
-    }
+  public final void eat(Food food) {
+    this.foodEaten.add(food);
+  }
 
-    public void eatAll(Food[] food) {
-        Collections.addAll(this.foodEaten, food);
-    }
+  public void eatAll(Food[] food) {
+    Collections.addAll(this.foodEaten, food);
+  }
 }

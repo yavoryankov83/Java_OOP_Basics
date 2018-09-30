@@ -5,17 +5,17 @@ import java.util.Collection;
 import java.util.Random;
 
 public class RandomArrayList extends ArrayList {
-    private Random random;
+  private Random random;
 
-    public RandomArrayList() {
-        this.random = new Random();
-    }
+  public RandomArrayList() {
+    this.random = new Random();
+  }
 
-    public Object getRandomElement() {
-        int rnd = this.random.nextInt(super.size());
-        Object element = super.get(rnd);
-        super.remove(rnd);
+  public Object getRandomElement() {
+    int rnd = this.random.nextInt(super.size());
+    Object element = super.get(rnd);
+    super.remove(rnd);
 
-        return element;
-    }
+    return element;
+  }
 }

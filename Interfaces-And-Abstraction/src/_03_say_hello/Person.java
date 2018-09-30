@@ -2,7 +2,7 @@ package _03_say_hello;
 
 public interface Person {
 
-    String getName();
+  String getName();
 
-    String sayHello();
+  String sayHello();
 }

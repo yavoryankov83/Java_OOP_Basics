@@ -8,31 +8,31 @@ import java.util.Collections;
 import java.util.List;
 
 public class TestPerson {
-    public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+  public static void main(String[] args) throws IOException {
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        int n = Integer.parseInt(reader.readLine());
+    int n = Integer.parseInt(reader.readLine());
 
-        List<Person> people = new ArrayList<>();
+    List<Person> people = new ArrayList<>();
 
-        for (int i = 0; i < n; i++) {
-            String[] input = reader.readLine().split(" ");
+    for (int i = 0; i < n; i++) {
+      String[] input = reader.readLine().split(" ");
 
-            people.add(new Person(input[0], input[1], Integer.parseInt(input[2])));
-        }
-
-        Collections.sort(people, (firstPerson, secondPerson) -> {
-            int sComp = firstPerson.getFirstName().compareTo(secondPerson.getFirstName());
-
-            if (sComp != 0) {
-                return sComp;
-            } else {
-                return Integer.compare(firstPerson.getAge(), secondPerson.getAge());
-            }
-        });
-
-        for (Person person : people) {
-            System.out.println(person.toString());
-        }
+      people.add(new Person(input[0], input[1], Integer.parseInt(input[2])));
     }
+
+    Collections.sort(people, (firstPerson, secondPerson) -> {
+      int sComp = firstPerson.getFirstName().compareTo(secondPerson.getFirstName());
+
+      if (sComp != 0) {
+        return sComp;
+      } else {
+        return Integer.compare(firstPerson.getAge(), secondPerson.getAge());
+      }
+    });
+
+    for (Person person : people) {
+      System.out.println(person.toString());
+    }
+  }
 }

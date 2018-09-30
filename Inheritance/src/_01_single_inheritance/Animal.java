@@ -1,7 +1,7 @@
 package _01_single_inheritance;
 
 public class Animal {
-    public void eat() {
-        System.out.println("eating...");
-    }
+  public void eat() {
+    System.out.println("eating...");
+  }
 }
